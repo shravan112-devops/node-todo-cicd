@@ -8,7 +8,7 @@ metadata:
     tier: node-label
 spec:
   # modify replicas according to your case
-  replicas: 6
+  replicas: 3
   selector:
     matchLabels:
       tier: node-label
@@ -20,4 +20,4 @@ spec:
     spec:
       containers:
       - name: node-container-rep
-        image: trainwithshubham/node-app-batch-6
+        image: shravan112/node-app
