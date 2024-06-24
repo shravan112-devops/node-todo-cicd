@@ -4,22 +4,21 @@ metadata:
   name: node-app-deployment
   namespace: node-app
   labels:
-    app: node-app
+    app: node-label
 spec:
   replicas: 2
   selector:
     matchLabels:
-      app: node-app
+      app: node-label
   template:
     metadata:
-      name: node-pod
       namespace: node-app
       labels:
-        app: node-app
+        app: node-label
     spec:
       containers:
-        - name: node-container
-          image: trainwithshubham/node-app-batch-6
+        - name: node-app-container
+          image: shravan112/node-app
           ports:
             - containerPort: 8000
           resources:
